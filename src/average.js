@@ -13,5 +13,5 @@
 */
 
 const average = () => {};
-
+  average.js
 module.exports = average;
