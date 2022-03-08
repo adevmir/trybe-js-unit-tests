@@ -25,14 +25,13 @@ const circle = require('../src/circle');
 
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
-    fail('Teste vazio!');
     // ESCREVA SEUS TESTES ABAIXO:
-    // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
-    // Teste se circle retorna um objeto.
-    // Teste se o objeto retornado tem 3 propriedades.
-    // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    // Teste se dentro do objeto retornado, a função retorna uma key com value igual a circunferência correta para um círculo de raio 2.
-    // Teste se dentro do objeto retornado, a função retorna uma key com value igual a área correta para um círculo de raio 3.
-    // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    expect(circle('a')).toBeUndefined();                                     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
+    expect(typeof circle(30)).toBe('object');                                // Teste se circle retorna um objeto.
+    expect(Object.keys(circle(5)).length).toEqual(3);                        // Teste se o objeto retornado tem 3 propriedades.
+    expect(circle()).toBeUndefined()                                         // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+    expect(Object.values(circle(2))[2]).toEqual(12.56);                      // Teste se dentro do objeto retornado, a função retorna uma key com value igual a circunferência correta para um círculo de raio 2.
+    expect(Object.values(circle(3))[1]).toEqual(28.259999999999998);         // Teste se dentro do objeto retornado, a função retorna uma key com value igual a área correta para um círculo de raio 3.
+    expect(Object.values(circle(3))).toEqual([3, 28.259999999999998, 18.84]);  // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
   });
 });
