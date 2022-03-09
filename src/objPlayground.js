@@ -33,9 +33,7 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
 */
 
-const calculator = (number1, number2) => {
-  kk
-};
+const calculator = (number1, number2) => {};
 
 const arrayGenerator = (type, object) => {};
 
