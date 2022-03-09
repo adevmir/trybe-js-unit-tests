@@ -8,21 +8,17 @@
 
   Parâmetros:
     - Uma string;
-  Comportamento:
+   Comportamento:
     const estudante = createStudent('Leandrão, o Lobo Solitário')
 
     estudante.name // Retorna: 'Leandrão, o Lobo Solitário'
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
-const frase = () => {
-  return 'Eita pessoa boa!';
-};
+const frase = () => 'Eita pessoa boa!';
 
-const createStudent = (nome) => {
-  return {
+const createStudent = (nome) => ({
     name: nome,
     feedback: frase,
-  };
-};
+  });
 
 module.exports = createStudent;
